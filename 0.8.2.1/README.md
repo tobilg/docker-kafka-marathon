@@ -9,7 +9,7 @@ As decribed in https://mesosphere.github.io/marathon/docs/rest-api.html#post-/v2
 So, if your Marathon instance is running at http://192.168.0.1:8080 your request could look like the one below. Please set the correct `parameters` values for your individual configuration.
 
 ```
-curl -XPOST 'http://127.0.0.1:8080/v2/apps' -d '{
+curl -XPOST 'http://192.168.0.1:8080/v2/apps' -d '{
     "id": "kafka-cluster",
     "env": {
         "KAFKA_ZOOKEEPER_CONNECT": "192.168.0.1:2181/kafka"
