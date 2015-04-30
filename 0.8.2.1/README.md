@@ -32,7 +32,7 @@ curl -XPOST 'http://192.168.0.1:8080/v2/apps' -d '{
 
 ## How it works
 
-Upon the container startup, the shell script `kafka-marathon-bootstrap.sh` is executed, which creates a `custom-server.properties` with custom properties derived from the configuration (host & port) Marathon provides, as well as the KAFKA_ZOOKEEPER_CONNECT given upon the app's start.
+Upon the container startup, the shell script `kafka-marathon-bootstrap.sh` is executed, which creates a `custom-server.properties` with custom properties derived from the configuration (host & port) Marathon provides, as well as the `KAFKA_ZOOKEEPER_CONNECT` environment variable given upon the app's start.
 
 This is done dynamically at instance start, meaning that if you scale the application via the Marathon frontend, the further instances are automatically added to the given cluster (which is managed via Zookeeper).
 
