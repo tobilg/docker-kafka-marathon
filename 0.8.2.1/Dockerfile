@@ -23,6 +23,5 @@ RUN chmod +x /usr/local/bin/kafka-marathon-bootstrap.sh
 RUN mkdir -p /var/log/kafka
 
 VOLUME ["/var/log/kafka"]
-EXPOSE 9092
 
 ENTRYPOINT ["/usr/local/bin/kafka-marathon-bootstrap.sh"]
